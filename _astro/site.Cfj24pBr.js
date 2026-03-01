@@ -1,0 +1,1 @@
+const s={name:"CS Kites 志成香港風箏店",description:"香港風箏專賣店，近 40 年歷史，由麥氏家族經營。提供超過 50 款風箏，適合初學者到進階玩家。",phone:"27783809",whatsapp:"61741284",whatsappLink:"https://wa.me/85261741284",address:{full:"香港九龍旺角界限街 12 號 D 地舖（太子站 D 出口）"},hours:{weekdays:"星期一至星期六：早上 9:00 - 晚上 8:00",sunday:"星期日休息",holidays:"公眾假期及勞工假期：早上 10:00 - 晚上 7:00"}};export{s};
