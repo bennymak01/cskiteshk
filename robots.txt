@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block internal/build assets
+Disallow: /_astro/
+
+# Sitemap
+Sitemap: https://cskites.hk/sitemap.xml
