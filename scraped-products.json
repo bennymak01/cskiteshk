@@ -1,0 +1,50 @@
+[
+  {
+    "id": "c611",
+    "name": "特大龍形風箏 3米",
+    "nameEn": "Extra Large Dragon Kite 3m",
+    "price": 280,
+    "imagePath": "https://placehold.co/600x600/e63946/ffffff?text=%E9%BE%8D%E5%BD%A2%E9%A2%A8%E7%AE%8F",
+    "imageAlt": "特大龍形風箏 3米",
+    "description": "採用精緻的龍紋設計，色彩鮮豔，飛行時姿態優美，適合在公園或海邊放飛。配備高強度骨架，穩定性極佳，是收藏與飛行兼備的上佳之選。",
+    "quote": "「我第一次放這款龍風箏，看著它在藍天中翱翔，感覺特別震撼，絕對是店內最吸睛的款式之一。」",
+    "category": "特-風箏",
+    "size": "300cm(L)"
+  },
+  {
+    "id": "c612",
+    "name": "彩虹傘形風箏",
+    "nameEn": "Rainbow Parachute Kite",
+    "price": 150,
+    "imagePath": "https://placehold.co/600x600/f4a261/ffffff?text=%E5%BD%A9%E8%99%B9%E9%A2%A8%E7%AE%8F",
+    "imageAlt": "彩虹傘形風箏",
+    "description": "傘形設計新穎獨特，放飛後如降落傘般在空中懸浮，視覺效果令人驚嘆。適合微風至中風條件，操控簡單，初學者也能輕鬆上手。",
+    "quote": "「我第一次看到傘形風箏就被吸引了，放飛後懸在空中的樣子真的非常特別，很多人都來問我在哪裡買的。」",
+    "category": "特-風箏",
+    "size": "120cm(W)"
+  },
+  {
+    "id": "c613",
+    "name": "立體章魚風箏 2米",
+    "nameEn": "3D Octopus Kite 2m",
+    "price": 200,
+    "imagePath": "https://placehold.co/600x600/6a4c93/ffffff?text=%E7%AB%A0%E9%AD%9A%E9%A2%A8%E7%AE%8F",
+    "imageAlt": "立體章魚風箏 2米",
+    "description": "立體魚形設計，顏色奪目，飛行時如魚兒游水般靈動飄逸。骨架輕巧堅固，微風即可輕鬆升空，適合親子同樂。",
+    "quote": "「我試飛這款魚風箏時，在微風中便能輕鬆升空，它的立體感令圍觀的人嘖嘖稱奇。」",
+    "category": "特-風箏",
+    "size": "200cm(L)"
+  },
+  {
+    "id": "c614",
+    "name": "七彩蝴蝶風箏",
+    "nameEn": "Colourful Butterfly Kite",
+    "price": 95,
+    "imagePath": "https://placehold.co/600x600/2a9d8f/ffffff?text=%E8%9D%B4%E8%9D%B6%E9%A2%A8%E7%AE%8F",
+    "imageAlt": "七彩蝴蝶風箏",
+    "description": "翩翩蝴蝶造型，色彩豐富，飛行時翅膀隨風搖曳，栩栩如生。適合輕至中風條件，老少皆宜，是家庭出遊的首選。",
+    "quote": "「我帶這款蝴蝶風箏去大埔，周圍小朋友都被吸引過來，大家都說好靚，非常推薦！」",
+    "category": "特-風箏",
+    "size": "100cm(W) x 60cm(H)"
+  }
+]
