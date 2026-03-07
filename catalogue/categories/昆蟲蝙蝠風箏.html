@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>昆蟲蝙蝠風箏 | CS Kite 志成風箏</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            color: white;
+        }
+        header h1 { font-size: 2rem; margin-bottom: 10px; }
+        header p { opacity: 0.9; }
+        .back-link {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+        }
+        .category-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        .category-header h2 { color: #333; font-size: 1.8rem; }
+        .category-count {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: #fafafa;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .product-info { padding: 20px; }
+        .item-code {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .product-name {
+            font-size: 1.1rem;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            min-height: 50px;
+        }
+        .product-price {
+            font-size: 1.4rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-desc {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-primary { background: #667eea; color: white; }
+        .btn-primary:hover { background: #5a67d8; }
+        .btn-whatsapp { background: #25D366; color: white; }
+        .btn-whatsapp:hover { background: #128C7E; }
+        .related-section {
+            background: rgba(255,255,255,0.95);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        .related-section h3 {
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        .related-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .related-item {
+            background: #f0f0f0;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: #667eea;
+            transition: all 0.3s;
+        }
+        .related-item:hover {
+            background: #667eea;
+            color: white;
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .product-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../kite_catalogue.html" class="back-link">← 返回全部產品</a>
+            <h1>🪁 昆蟲蝙蝠風箏</h1>
+            <p>CS Kite 志成風箏產品目錄</p>
+        </header>
+
+        <section class="category-section">
+            <div class="category-header">
+                <h2>昆蟲蝙蝠風箏</h2>
+                <span class="category-count">3 件產品</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://csstationery.hk/wp-content/uploads/2024/04/1.6米-蝙蝠-風箏.jpg" alt="1.6米 蝙蝠 風箏 ～尺寸：1580cm(W) x 66cm(H) + 110cm (尾)" class="product-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22><rect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/><text fill=%22%23999%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22>風箏圖片</text></svg>'">
+                    <div class="product-info">
+                        <span class="item-code">CSK-026</span>
+                        <h3 class="product-name">1.6米 蝙蝠 風箏 ～尺寸：1580cm(W) x 66cm(H) + 110cm (尾)</h3>
+                        <div class="product-price">$130.00</div>
+                        <p class="product-desc">精選優質1.6米 蝙蝠 風箏 ，適合戶外活動及親子同樂。</p>
+                        <div class="product-actions">
+                            <a href="https://csstationery.hk/product/1-6%e7%b1%b3-%e8%9d%99%e8%9d%a0-%e9%a2%a8%e7%ae%8f-%ef%bd%9e%e5%b0%ba%e5%af%b8%ef%bc%9a1580cmw-x-66cmh-110cm-%e5%b0%be/" class="btn btn-primary" target="_blank">查看詳情</a>
+                            <a href="https://wa.me/85261741284?text=我想查詢產品 CSK-026 - 1.6米 蝙蝠 風箏 ～尺寸：1580cm(W) x 66cm(H) + 110cm (尾)" class="btn btn-whatsapp" target="_blank">WhatsApp查詢</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csstationery.hk/wp-content/uploads/2022/04/蝙蝠-風箏.png" alt="2.4米 蝙蝠 風箏 ～尺寸：240cm(W) x 120cm(H)" class="product-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22><rect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/><text fill=%22%23999%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22>風箏圖片</text></svg>'">
+                    <div class="product-info">
+                        <span class="item-code">CSK-027</span>
+                        <h3 class="product-name">2.4米 蝙蝠 風箏 ～尺寸：240cm(W) x 120cm(H)</h3>
+                        <div class="product-price">$160.00</div>
+                        <p class="product-desc">精選優質2.4米 蝙蝠 風箏 ，適合戶外活動及親子同樂。</p>
+                        <div class="product-actions">
+                            <a href="https://csstationery.hk/product/1-8%e7%b1%b3-%e8%9d%99%e8%9d%a0-%e9%a2%a8%e7%ae%8f-%ef%bd%9e%e5%b0%ba%e5%af%b8%ef%bc%9a180cmw-x-75cmh/" class="btn btn-primary" target="_blank">查看詳情</a>
+                            <a href="https://wa.me/85261741284?text=我想查詢產品 CSK-027 - 2.4米 蝙蝠 風箏 ～尺寸：240cm(W) x 120cm(H)" class="btn btn-whatsapp" target="_blank">WhatsApp查詢</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://csstationery.hk/wp-content/uploads/2021/02/大蜻蜓-風箏～尺寸：200cm-W-x-290cm-H.png" alt="大蜻蜓 風箏～尺寸：200cm (W) x 290cm (H)" class="product-image" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22200%22><rect fill=%22%23ddd%22 width=%22300%22 height=%22200%22/><text fill=%22%23999%22 x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22>風箏圖片</text></svg>'">
+                    <div class="product-info">
+                        <span class="item-code">CSK-038</span>
+                        <h3 class="product-name">大蜻蜓 風箏～尺寸：200cm (W) x 290cm (H)</h3>
+                        <div class="product-price">$130.00</div>
+                        <p class="product-desc">精選優質大蜻蜓 風箏，適合戶外活動及親子同樂。</p>
+                        <div class="product-actions">
+                            <a href="https://csstationery.hk/product/%e5%a4%a7%e8%9c%bb%e8%9c%93-%e9%a2%a8%e7%ae%8f%ef%bd%9e%e5%b0%ba%e5%af%b8%ef%bc%9a200cm-w-x-290cm-h/" class="btn btn-primary" target="_blank">查看詳情</a>
+                            <a href="https://wa.me/85261741284?text=我想查詢產品 CSK-038 - 大蜻蜓 風箏～尺寸：200cm (W) x 290cm (H)" class="btn btn-whatsapp" target="_blank">WhatsApp查詢</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-section">
+            <h3>📂 其他產品分類</h3>
+            <div class="related-grid">
+                <a href="飛鳥風箏.html" class="related-item">飛鳥風箏</a>
+                <a href="海洋生物風箏.html" class="related-item">海洋生物風箏</a>
+                <a href="蝴蝶風箏.html" class="related-item">蝴蝶風箏</a>
+                <a href="神龍風箏.html" class="related-item">神龍風箏</a>
+                <a href="可愛動物風箏.html" class="related-item">可愛動物風箏</a>
+                <a href="飛機火箭風箏.html" class="related-item">飛機火箭風箏</a>
+                <a href="傳統造型風箏.html" class="related-item">傳統造型風箏</a>
+                <a href="長蛇風箏.html" class="related-item">長蛇風箏</a>
+                <a href="迷你手掌風箏.html" class="related-item">迷你手掌風箏</a>
+                <a href="特技風箏.html" class="related-item">特技風箏</a>
+                <a href="卡通人物風箏.html" class="related-item">卡通人物風箏</a>
+                <a href="風箏配件與工具.html" class="related-item">風箏配件與工具</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2024 CS Kite 志成風箏 | cskiteshk.com</p>
+            <p>WhatsApp: 6174 1284 | 九龍界限街12號D地下</p>
+        </footer>
+    </div>
+
+    <a href="https://wa.me/85261741284" class="whatsapp-float" target="_blank">💬 查詢訂購</a>
+</body>
+</html>
