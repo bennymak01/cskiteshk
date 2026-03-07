@@ -5,4 +5,4 @@ Allow: /
 Disallow: /_astro/
 
 # Sitemap
-Sitemap: https://cskites.hk/sitemap.xml
+Sitemap: https://www.cskiteshk.com/sitemap.xml
