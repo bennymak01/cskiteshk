@@ -1,6 +1,6 @@
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, Link, useNavigate } from 'react-router-dom';
 import { useCart } from '@/context/CartContext';
-import { ShoppingCart, Menu, X } from 'lucide-react';
+import { ShoppingCart, Menu, X, Search } from 'lucide-react';
 import { useState } from 'react';
 import { categories } from '@/data/products';
 import { SEO } from './SEO';
@@ -8,6 +8,17 @@ import { SEO } from './SEO';
 export default function Layout() {
   const { totalItems } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      setSearchQuery('');
+      setMobileMenuOpen(false);
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sky-400 via-blue-500 to-purple-600">
@@ -52,6 +63,23 @@ export default function Layout() {
                   </div>
                 </div>
               </div>
+              {/* Desktop Search */}
+              <form onSubmit={handleSearch} className="flex items-center">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  placeholder="搜尋風箏..."
+                  className="w-36 lg:w-48 bg-white/15 border border-white/30 text-white placeholder-white/60 rounded-l-full px-3 py-1.5 text-sm focus:outline-none focus:bg-white/25 focus:border-white/50"
+                />
+                <button
+                  type="submit"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-r-full px-3 py-1.5 transition-colors"
+                >
+                  <Search className="w-4 h-4" />
+                </button>
+              </form>
+
               <Link to="/cart" className="relative text-white hover:text-yellow-300 transition-colors">
                 <ShoppingCart className="w-6 h-6" />
                 {totalItems > 0 && (
@@ -76,6 +104,23 @@ export default function Layout() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md">
             <div className="px-4 py-4 space-y-2">
+              {/* Mobile Search */}
+              <form onSubmit={handleSearch} className="flex items-center mb-3">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={e => setSearchQuery(e.target.value)}
+                  placeholder="搜尋風箏..."
+                  className="flex-1 bg-gray-100 border border-gray-300 text-gray-800 placeholder-gray-400 rounded-l-full px-4 py-2 text-sm focus:outline-none focus:border-blue-400"
+                />
+                <button
+                  type="submit"
+                  className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 rounded-r-full px-4 py-2 transition-colors"
+                >
+                  <Search className="w-4 h-4" />
+                </button>
+              </form>
+
               <Link
                 to="/"
                 className="block py-2 text-gray-800 hover:text-blue-600"
