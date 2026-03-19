@@ -218,6 +218,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.cskiteshk.com/search/</loc>
+    <lastmod>2026-03-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://www.cskiteshk.com/en/about/</loc>
     <lastmod>2026-03-19</lastmod>
     <changefreq>monthly</changefreq>
