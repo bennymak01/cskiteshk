@@ -1,0 +1,38 @@
+name: Publish Specific Blog Post 2026-04-27
+
+on:
+  schedule:
+    # Runs at 9:00 AM HKT (1:00 AM UTC) on April 27, 2026
+    - cron: '0 1 27 4 *'
+  workflow_dispatch: # 允許手動觸發測試
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Move specific draft to blog directory
+        run: |
+          POST_FILENAME="2026-04-27-翱翔天際，安全為先：CS-Kites-帶您體驗風箏的無限樂趣.md"
+          DRAFT_PATH="_drafts/${POST_FILENAME}"
+          
+          if [ -f "$DRAFT_PATH" ]; then
+            SLUG="safety-kite-flying" # 文章的 URL 路徑，您可以根據需要修改
+            TARGET_DIR="blog/$SLUG"
+            mkdir -p "$TARGET_DIR"
+            mv "$DRAFT_PATH" "$TARGET_DIR/index.md"
+            echo "Published $POST_FILENAME to $TARGET_DIR/index.md"
+          else
+            echo "Draft file $DRAFT_PATH not found. Skipping publish." # 如果文件已被移動或不存在，則跳過
+            exit 0 # 成功退出，不報錯
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add .
+          git commit -m "Automated publish: 2026-04-27-翱翔天際，安全為先"
+          git push
