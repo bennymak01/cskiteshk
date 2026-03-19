@@ -5,6 +5,7 @@ import { SEO } from '@/components/SEO';
 import { ShoppingCart } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { Button } from '@/components/ui/button';
+import ProductFilterBar from '@/components/ProductFilterBar';
 import {
   Pagination,
   PaginationContent,
@@ -72,7 +73,7 @@ export default function CategoryPage() {
         </nav>
 
         {/* Category Header */}
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 mb-8">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 md:p-8 mb-6">
           <div className="flex items-center gap-4">
             <span className="text-5xl md:text-6xl">{categoryIcons[decodedCategory] || '🪁'}</span>
             <div>
@@ -80,6 +81,11 @@ export default function CategoryPage() {
               <p className="text-white/70 mt-1">共 {products.length} 件產品</p>
             </div>
           </div>
+        </div>
+
+        {/* Filter Search Bar */}
+        <div className="mb-8">
+          <ProductFilterBar defaultCategory={decodedCategory} />
         </div>
 
         {/* Products Grid */}

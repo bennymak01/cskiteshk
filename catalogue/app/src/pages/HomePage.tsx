@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { categories, products, getCategoryProductCount } from '@/data/products';
 import { SEO } from '@/components/SEO';
 import { MessageCircle, Wind, Package, Truck } from 'lucide-react';
+import ProductFilterBar from '@/components/ProductFilterBar';
 
 export default function HomePage() {
   // Get featured products (one from each category)
@@ -48,6 +49,11 @@ export default function HomePage() {
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp 查詢
             </a>
+          </div>
+
+          {/* Filter Search Bar */}
+          <div className="mt-12 max-w-5xl mx-auto">
+            <ProductFilterBar />
           </div>
         </div>
       </section>

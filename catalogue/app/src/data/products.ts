@@ -893,3 +893,25 @@ export const getRelatedProducts = (product: Product, count: number = 3) => {
 export const getCategoryProductCount = (category: string) => {
   return products.filter(p => p.category === category).length;
 };
+
+function checkPriceRange(price: number, priceRange: string): boolean {
+  switch (priceRange) {
+    case 'under50': return price < 50;
+    case '50-100': return price >= 50 && price <= 100;
+    case '100-200': return price > 100 && price <= 200;
+    case 'over200': return price > 200;
+    default: return true;
+  }
+}
+
+export const filterProducts = (query: string, category: string, priceRange: string): Product[] => {
+  return products.filter(p => {
+    const matchesCategory = !category || p.category === category;
+    const matchesQuery = !query ||
+      p.name.toLowerCase().includes(query.toLowerCase()) ||
+      p.description.toLowerCase().includes(query.toLowerCase());
+    const price = parseFloat(p.price.replace(/[^0-9.]/g, ''));
+    const matchesPrice = !priceRange || checkPriceRange(price, priceRange);
+    return matchesCategory && matchesQuery && matchesPrice;
+  });
+};
