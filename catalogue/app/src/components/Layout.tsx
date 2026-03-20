@@ -202,7 +202,7 @@ export default function Layout() {
             </div>
           </div>
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-white/60 text-sm">
-            <p>© 2024 CS Kite 志成風箏. All rights reserved.</p>
+            <p>© 2024 CS Kite 志成風箏. All rights reserved. | <a href="/terms" className="hover:text-white underline">條款與細則</a></p>
           </div>
         </div>
       </footer>
