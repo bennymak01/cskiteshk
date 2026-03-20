@@ -1,0 +1,100 @@
+name: Publish Products from Drafts
+
+on:
+  schedule:
+    # 4 月 10 日上午 9 點 (UTC+8 時區)
+    # 使用 UTC 時間，香港時間 9:00 = UTC 1:00
+    - cron: '0 1 10 4 *'
+  
+  # 允許手動觸發
+  workflow_dispatch:
+
+jobs:
+  publish-products:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Set up Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+      
+      - name: Get current date
+        id: date
+        run: |
+          # 香港時間
+          HK_DATE=$(TZ='Asia/Hong_Kong' date +'%Y-%m-%d')
+          echo "date=$HK_DATE" >> $GITHUB_OUTPUT
+          echo "Current HK date: $HK_DATE"
+      
+      - name: Find and move draft files
+        run: |
+          CURRENT_DATE="${{ steps.date.outputs.date }}"
+          DRAFT_DIR="_drafts"
+          PUBLISH_DIR="products"
+          
+          # 尋找今天日期的草稿檔案
+          if [ -d "$DRAFT_DIR" ]; then
+            echo "Searching for draft files with date: $CURRENT_DATE"
+            
+            # 尋找所有以當天日期開頭的 markdown 檔案
+            for file in "$DRAFT_DIR"/"$CURRENT_DATE"*.md; do
+              if [ -f "$file" ]; then
+                filename=$(basename "$file")
+                # 移除日期前綴，保留檔名
+                new_filename="${filename#????-??-??-}"
+                
+                echo "Publishing: $filename -> $new_filename"
+                
+                # 複製到發佈目錄
+                cp "$file" "$PUBLISH_DIR/$new_filename"
+              fi
+            done
+            
+            # 尋找所有以當天日期開頭的圖片檔案
+            for img in "$DRAFT_DIR"/"$CURRENT_DATE"*.{jpg,jpeg,png,gif}; do
+              if [ -f "$img" ]; then
+                filename=$(basename "$img")
+                # 移除日期前綴，保留檔名
+                new_filename="${filename#????-??-??-}"
+                
+                echo "Publishing image: $filename -> $new_filename"
+                
+                # 複製到發佈目錄
+                cp "$img" "$PUBLISH_DIR/$new_filename"
+              fi
+            done
+          fi
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected"
+          fi
+      
+      - name: Commit and push changes
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          CURRENT_DATE="${{ steps.date.outputs.date }}"
+          git add -A
+          git commit -m "Publish products for $CURRENT_DATE"
+          git push origin main
+      
+      - name: Create deployment notification
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          CURRENT_DATE="${{ steps.date.outputs.date }}"
+          echo "✅ Products published successfully on $CURRENT_DATE"
+          echo "📅 Date: $CURRENT_DATE"
+          echo "🔗 Repository: ${{ github.repository }}"
+          echo "📝 Commit: ${{ github.sha }}"
