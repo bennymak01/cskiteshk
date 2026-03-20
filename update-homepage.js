@@ -110,17 +110,11 @@ function productCardHtml(p) {
 }
 
 function blogCardHtml(p) {
-  const imgHtml = p.image
-    ? `<img src="${p.image}" alt="${p.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.style.display='none'">`
-    : `<div class="w-full h-full flex items-center justify-center text-5xl bg-green-50">🪁</div>`;
-  return `<div class="blog-carousel-item flex-shrink-0 w-64 sm:w-72">
-              <a href="${p.url}" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
-                <div class="aspect-square bg-gray-100 overflow-hidden">
-                  ${imgHtml}
-                </div>
-                <div class="p-4">
-                  <h3 class="font-bold text-gray-800 text-sm leading-snug line-clamp-3">${p.title}</h3>
-                  <span class="inline-flex items-center gap-1 mt-3 text-green-600 text-xs font-semibold">閱讀文章 <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
+  return `<div class="blog-carousel-item flex-shrink-0 w-52 sm:w-60">
+              <a href="${p.url}" class="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 border border-gray-100 h-full">
+                <div class="p-5 flex flex-col h-full">
+                  <h3 class="font-bold text-gray-800 text-base leading-snug flex-1">${p.title}</h3>
+                  <span class="inline-flex items-center gap-1 mt-4 text-green-600 text-sm font-semibold">閱讀文章 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
                 </div>
               </a>
             </div>`;
