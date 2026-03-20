@@ -29,7 +29,7 @@ const PRODUCTS_DIR = path.join(__dirname, 'products');
 const BLOG_DIR = path.join(__dirname, 'blog');
 const IMAGE_BASE = __dirname;
 const MAX_PRODUCTS = 8;
-const MAX_POSTS = 6;
+const MAX_POSTS = 2;
 
 // ─── helpers ────────────────────────────────────────────────────────────────
 
