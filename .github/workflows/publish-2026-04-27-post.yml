@@ -9,6 +9,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,5 +36,6 @@ jobs:
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git add .
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "Automated publish: 2026-04-27-翱翔天際，安全為先"
           git push
