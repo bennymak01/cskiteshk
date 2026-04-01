@@ -38,4 +38,4 @@ jobs:
           git add .
           git diff --staged --quiet && echo "No posts to publish" && exit 0
           git commit -m "Auto-publish scheduled posts: $(date +%Y-%m-%d)"
-          git push
+          git push origin HEAD
