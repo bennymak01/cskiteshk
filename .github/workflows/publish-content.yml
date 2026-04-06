@@ -1,0 +1,98 @@
+name: Unified Content Publisher
+
+on:
+  schedule:
+    # Runs at 9:00 AM HKT (1:00 AM UTC) every day
+    - cron: '0 1 * * *'
+  workflow_dispatch: # Allows manual trigger for testing
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Get current date
+        id: date
+        run: |
+          HK_DATE=$(TZ='Asia/Hong_Kong' date +'%Y-%m-%d')
+          echo "today=$HK_DATE" >> $GITHUB_OUTPUT
+          echo "Current HK date: $HK_DATE"
+
+      - name: Publish Blog Posts
+        run: |
+          TODAY="${{ steps.date.outputs.today }}"
+          echo "Checking for blog posts scheduled for $TODAY..."
+          
+          find _drafts -maxdepth 1 -name "${TODAY}*.md" -type f | while read -r post_file; do
+            filename=$(basename "$post_file")
+            
+            # Skip if it's a product
+            if [[ "$filename" =~ "rainbow" || "$filename" =~ "panda" || "$filename" =~ "bear" || "$filename" =~ "capibara" || "$filename" =~ "diy" || "$filename" =~ "fishing-rod" ]]; then
+              echo "Skipping product-like file in blog publish: $filename"
+              continue
+            fi
+            
+            # Generate slug: remove date prefix and .md extension
+            slug=$(echo "$filename" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//' | sed 's/\.md$//')
+            target_dir="blog/$slug"
+            
+            echo "Publishing blog post: $filename -> $target_dir/index.md"
+            mkdir -p "$target_dir"
+            mv "$post_file" "$target_dir/index.md"
+          done
+
+      - name: Publish Products
+        run: |
+          TODAY="${{ steps.date.outputs.today }}"
+          echo "Checking for products scheduled for $TODAY..."
+          
+          find _drafts -maxdepth 1 -name "${TODAY}*.md" -type f | while read -r product_file; do
+            filename=$(basename "$product_file")
+            
+            # Only process if it's a product
+            if [[ "$filename" =~ "rainbow" || "$filename" =~ "panda" || "$filename" =~ "bear" || "$filename" =~ "capibara" || "$filename" =~ "diy" || "$filename" =~ "fishing-rod" ]]; then
+              new_filename="${filename#????-??-??-}"
+              echo "Publishing product: $filename -> products/$new_filename"
+              cp "$product_file" "products/$new_filename"
+            fi
+          done
+          
+          # Copy all images with today's date prefix to products/
+          find _drafts -maxdepth 1 -name "${TODAY}*.{jpg,jpeg,png,gif}" -type f | while read -r img_file; do
+            img_filename=$(basename "$img_file")
+            new_img_filename="${img_filename#????-??-??-}"
+            echo "Publishing product image: $img_filename -> products/$new_img_filename"
+            cp "$img_file" "products/$new_img_filename"
+          done
+
+      - name: Update Sitemap
+        run: |
+          if [ -f "generate-sitemap.js" ]; then
+            echo "Updating sitemap..."
+            node generate-sitemap.js
+          else
+            echo "generate-sitemap.js not found. Skipping sitemap update."
+          fi
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Automated content publish and sitemap update: ${{ steps.date.outputs.today }}"
+            git push origin main
+          fi
