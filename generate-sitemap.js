@@ -6,7 +6,7 @@
 const fs   = require('fs');
 const path = require('path');
 
-const DOMAIN = 'https://www.cskiteshk.com';
+const DOMAIN = 'https://www.cskites.hk';
 const ROOT   = __dirname;
 
 // Directories to skip entirely (relative to ROOT, using OS path separators)

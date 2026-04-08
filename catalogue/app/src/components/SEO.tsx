@@ -12,7 +12,7 @@ export function SEO({
   title, 
   description, 
   image = '/og-image.jpg',
-  url = 'https://cskiteshk.com',
+  url = 'https://cskites.hk',
   type = 'website'
 }: SEOProps) {
   const siteTitle = 'CS Kite 志成風箏';
@@ -45,7 +45,7 @@ export function SEO({
 
       {/* Additional SEO */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta httpEquiv="Content-Language" content="zh-TW" />
+      <meta httpEquiv="Content-Language" content="zh-HK" />
     </Helmet>
   );
 }
