@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^calendarprint.us [NC]
+RewriteRule ^(.*)$ https://www.cskites.hk/$1 [R=301,L]
