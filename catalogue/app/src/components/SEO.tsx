@@ -12,7 +12,7 @@ export function SEO({
   title, 
   description, 
   image = '/og-image.jpg',
-  url = 'https://cskites.hk',
+  url = 'https://www.cskites.hk',
   type = 'website'
 }: SEOProps) {
   const siteTitle = 'CS Kite 志成風箏';
