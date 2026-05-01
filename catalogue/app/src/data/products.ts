@@ -835,7 +835,7 @@ export const products: Product[] = [
   {
     "id": "CSK-104",
     "name": "風箏膠柄線轆 150米 尼龍線 傳統線轆",
-    "price": "$50.00",
+    "price": "$45.00",
     "description": "精選優質風箏膠柄線轆 150米 尼龍線 傳統線轆，適合戶外活動及親子同樂。",
     "image_url": "/image/products/風箏線轆-600x602.jpg",
     "category": "風箏配件與工具"
