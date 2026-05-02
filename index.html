@@ -40,15 +40,31 @@
           <p class="text-xs font-bold tracking-widest uppercase text-green-600 mb-1">NEW ARRIVALS</p>
           <h2 class="text-4xl font-bold text-green-700">最新風箏</h2>
         </div>
-
+        <div class="flex gap-3">
+          <button id="kite-latest-carousel-prev" aria-label="上一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8249;</button>
+          <button id="kite-latest-carousel-next" aria-label="下一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8250;</button>
+        </div>
       </div>
       <div class="relative">
-        <div id="kite-latest-grid" class="grid grid-cols-2 gap-4 sm:gap-6">
-            <div class="kite-grid-item">
+        <div id="kite-latest-carousel" class="flex gap-5 overflow-x-auto scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+          <style>#kite-latest-carousel::-webkit-scrollbar{display:none}</style>
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
+              <a href="/products/kite-set/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                <div class="aspect-square bg-gray-50 overflow-hidden">
+                  <img src="/image/products/kite-set.jpg" alt="小風箏 + 魚杆套裝" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
+                <div class="p-4">
+                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">兒童風箏</span>
+                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">小風箏 + 魚杆套裝</h3>
+                  <p class="text-blue-600 font-bold text-lg">HK$48</p>
+                </div>
+              </a>
+            </div>
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
               <a href="/products/kite-094/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
                 <div class="aspect-square bg-gray-50 overflow-hidden">
-                  <img src="/image/products01/kite-094-magic-octopus-8m.jpg" alt="8米魔力八爪魚風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\" w-full="" h-full="" flex="" items-center="" justify-center="" text-4xl\"="">🪁</div>'"&gt;
-                </a></div><a href="/products/kite-094/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                  <img src="/image/products01/kite-094-magic-octopus-8m-1.jpg" alt="8米魔力八爪魚風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
                 <div class="p-4">
                   <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">軟體風箏</span>
                   <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">8米魔力八爪魚風箏</h3>
@@ -56,11 +72,11 @@
                 </div>
               </a>
             </div>
-            <div class="kite-grid-item">
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
               <a href="/products/kite-061/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
                 <div class="aspect-square bg-gray-50 overflow-hidden">
-                  <img src="/image/products01/kite-061-sky-dragon.jpg" alt="盤龍風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\" w-full="" h-full="" flex="" items-center="" justify-center="" text-4xl\"="">🪁</div>'"&gt;
-                </a></div><a href="/products/kite-061/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                  <img src="/image/products01/kite-061-sky-dragon-1.jpg" alt="盤龍風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
                 <div class="p-4">
                   <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">傳統風箏</span>
                   <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">盤龍風箏</h3>
@@ -68,11 +84,11 @@
                 </div>
               </a>
             </div>
-            <div class="kite-grid-item">
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
               <a href="/products/kite-020/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
                 <div class="aspect-square bg-gray-50 overflow-hidden">
-                  <img src="/image/products01/kite-020-four-winged-goldfish-red.jpg" alt="四翅小金魚風箏（紅色）" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\" w-full="" h-full="" flex="" items-center="" justify-center="" text-4xl\"="">🪁</div>'"&gt;
-                </a></div><a href="/products/kite-020/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                  <img src="/image/products01/kite-020-four-winged-goldfish-red-1.jpg" alt="四翅小金魚風箏（紅色）" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
                 <div class="p-4">
                   <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">傳統風箏</span>
                   <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">四翅小金魚風箏（紅色）</h3>
@@ -80,28 +96,74 @@
                 </div>
               </a>
             </div>
-            <div class="kite-grid-item">
-              <a href="/products/c614/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
+              <a href="/products/diy-large/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
                 <div class="aspect-square bg-gray-50 overflow-hidden">
-                  <img src="/image/products/c614.png" alt="七彩蝴蝶風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\" w-full="" h-full="" flex="" items-center="" justify-center="" text-4xl\"="">🪁</div>'"&gt;
-                </a></div><a href="/products/c614/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                  <img src="/image/products/diy-large.jpg" alt="DIY 風箏材料包 (大)" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
                 <div class="p-4">
-                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">特-風箏</span>
-                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">七彩蝴蝶風箏</h3>
-                  <p class="text-blue-600 font-bold text-lg">HK$95</p>
+                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">DIY 風箏材料</span>
+                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">DIY 風箏材料包 (大)</h3>
+                  <p class="text-blue-600 font-bold text-lg">HK$70</p>
                 </div>
               </a>
-            
-        
-      
+            </div>
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
+              <a href="/products/cs-1023/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                <div class="aspect-square bg-gray-50 overflow-hidden">
+                  <img src="/image/products/cs-1023.jpg" alt="1.8米 金鷹風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
+                <div class="p-4">
+                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">飛鳥風箏</span>
+                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">1.8米 金鷹風箏</h3>
+                  <p class="text-blue-600 font-bold text-lg">HK$90</p>
+                </div>
+              </a>
+            </div>
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
+              <a href="/products/cs-1022/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                <div class="aspect-square bg-gray-50 overflow-hidden">
+                  <img src="/image/products/cs-1022.jpg" alt="1.7米 白頭鷹風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
+                <div class="p-4">
+                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">飛鳥風箏</span>
+                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">1.7米 白頭鷹風箏</h3>
+                  <p class="text-blue-600 font-bold text-lg">HK$75</p>
+                </div>
+              </a>
+            </div>
+            <div class="kite-carousel-item flex-shrink-0 w-64 sm:w-72">
+              <a href="/products/cs-1021/" class="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:scale-105 border border-gray-100">
+                <div class="aspect-square bg-gray-50 overflow-hidden">
+                  <img src="/image/products/cs-1021.jpg" alt="1.65米 雄鷹風箏" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy" onerror="this.onerror=null;this.parentElement.innerHTML='<div class=\"w-full h-full flex items-center justify-center text-4xl\">🪁</div>'">
+                </div>
+                <div class="p-4">
+                  <span class="text-xs text-green-600 font-semibold uppercase tracking-wide">飛鳥風箏</span>
+                  <h3 class="font-bold text-gray-800 mt-1 mb-2 line-clamp-2 text-sm leading-snug">1.65米 雄鷹風箏</h3>
+                  <p class="text-blue-600 font-bold text-lg">HK$75</p>
+                </div>
+              </a>
+            </div>
+        </div>
+      </div>
       <div class="text-center mt-8">
         <a href="/products/" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
           查看全部風箏
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
       </div>
-    
-
+    </div>
+    <script>
+    (function(){
+      var track = document.getElementById('kite-latest-carousel');
+      var prevBtn = document.getElementById('kite-latest-carousel-prev');
+      var nextBtn = document.getElementById('kite-latest-carousel-next');
+      if (!track || !prevBtn || !nextBtn) return;
+      var cardW = track.querySelector('.kite-carousel-item') ? track.querySelector('.kite-carousel-item').offsetWidth + 20 : 292;
+      prevBtn.addEventListener('click', function(){ track.scrollBy({left: -cardW * 2, behavior: 'smooth'}); });
+      nextBtn.addEventListener('click', function(){ track.scrollBy({left: cardW * 2, behavior: 'smooth'}); });
+    })();
+    </script>
   </section>
   <!-- /Latest Kites Section -->
     <section id="benefits-stacked" style="background:#0f172a;padding-top:0">
@@ -246,8 +308,8 @@
           <h2 class="text-4xl font-bold text-green-700">最新文章</h2>
         </div>
         <div class="flex gap-3">
-          <button id="blog-latest-carousel-prev" aria-label="上一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">‹</button>
-          <button id="blog-latest-carousel-next" aria-label="下一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">›</button>
+          <button id="blog-latest-carousel-prev" aria-label="上一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8249;</button>
+          <button id="blog-latest-carousel-next" aria-label="下一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8250;</button>
         </div>
       </div>
       <div class="relative">
@@ -257,7 +319,7 @@
               <a href="/blog/beginner-kite-brands/" class="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 border border-gray-100 h-full">
                 <div class="p-5 flex flex-col h-full">
                   <h3 class="font-bold text-gray-800 text-base leading-snug flex-1">有哪些適合初學者使用的風箏品牌推薦？</h3>
-                  <span class="inline-flex items-center gap-1 mt-4 text-green-600 text-sm font-semibold">閱讀文章 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></span>
+                  <span class="inline-flex items-center gap-1 mt-4 text-green-600 text-sm font-semibold">閱讀文章 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
                 </div>
               </a>
             </div>
@@ -265,7 +327,7 @@
               <a href="/blog/children-kites-safe/" class="group block bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all transform hover:scale-105 border border-gray-100 h-full">
                 <div class="p-5 flex flex-col h-full">
                   <h3 class="font-bold text-gray-800 text-base leading-snug flex-1">兒童風箏邊款最安全易放？</h3>
-                  <span class="inline-flex items-center gap-1 mt-4 text-green-600 text-sm font-semibold">閱讀文章 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg></span>
+                  <span class="inline-flex items-center gap-1 mt-4 text-green-600 text-sm font-semibold">閱讀文章 <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg></span>
                 </div>
               </a>
             </div>
@@ -274,7 +336,7 @@
       <div class="text-center mt-8">
         <a href="/blog/" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
           查看全部文章
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
         </a>
       </div>
     </div>
