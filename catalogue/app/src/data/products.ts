@@ -983,7 +983,7 @@ export const products: Product[] = [
     "name": "釣魚竿風箏 – 天使",
     "price": "$75.00",
     "description": "魚竿式設計，天使造型，微風即可升空，單手操控，是最方便的兒童入門風箏套裝。",
-    "image_url": "/image/products/c41.png",
+    "image_url": "/catalogue/images/cs-1000-angel-fishing-rod-kite-1.jpg",
     "category": "兒童風箏"
   },
   {
@@ -991,7 +991,7 @@ export const products: Product[] = [
     "name": "釣魚竿風箏 – 燕子",
     "price": "$75.00",
     "description": "魚竿式設計，仿真燕子造型，飛行時栩栩如生，操作簡便，適合所有年齡層。",
-    "image_url": "/image/products/c42.png",
+    "image_url": "/catalogue/images/cs-1001-swallow-fishing-rod-kite-1.jpg",
     "category": "兒童風箏"
   },
   {
@@ -999,7 +999,7 @@ export const products: Product[] = [
     "name": "小火箭風箏",
     "price": "$75.00",
     "description": "火箭造型風箏，科技感十足，色彩鮮明，飛行穩定，是孩子們最喜歡的科技主題風箏。",
-    "image_url": "/image/products/k075.jpg",
+    "image_url": "/catalogue/images/cs-1002-small-rocket-kite-1.jpg",
     "category": "飛機火箭風箏"
   },
   {
@@ -1007,7 +1007,7 @@ export const products: Product[] = [
     "name": "彩虹立體船風箏",
     "price": "$75.00",
     "description": "立體船艦造型結合七彩配色，空中飛行時如彩虹飛船，結構穩固，視覺效果非凡。",
-    "image_url": "/image/products/k082.jpg",
+    "image_url": "/catalogue/images/cs-1003-rainbow-ship-kite-1.jpg",
     "category": "彩虹風箏"
   },
   {
@@ -1015,7 +1015,7 @@ export const products: Product[] = [
     "name": "火箭飛機風箏",
     "price": "$75.00",
     "description": "火箭與飛機雙重設計，造型獨特充滿科技感，飛行穩定，適合航空主題愛好者。",
-    "image_url": "/image/products/k088.jpg",
+    "image_url": "/catalogue/images/cs-1004-rocket-plane-kite-1.jpg",
     "category": "飛機火箭風箏"
   },
   {
@@ -1023,7 +1023,7 @@ export const products: Product[] = [
     "name": "戰斗機風箏 (紅/藍/陸地迷彩)",
     "price": "$75.00",
     "description": "提供紅、藍、陸地迷彩三款選擇，重現現代戰鬥機雄姿，飛行穩定，是軍事迷首選。",
-    "image_url": "/image/products/k089.jpg",
+    "image_url": "/catalogue/images/cs-1005-fighter-jet-kite-1.jpg",
     "category": "飛機火箭風箏"
   },
   {
@@ -1039,7 +1039,7 @@ export const products: Product[] = [
     "name": "1.5米 藍/紅戰機風箏 (第2代) ～ 尺寸：150cm (W)",
     "price": "$75.00",
     "description": "第2代戰機風箏全面升級，150cm展翼，更精細細節，飛行性能更優異，提供藍/紅兩款。",
-    "image_url": "/image/products/k091.jpg",
+    "image_url": "/catalogue/images/cs-1007-blue-fighter-kite-1.jpg",
     "category": "飛機火箭風箏"
   },
   {
@@ -1047,7 +1047,7 @@ export const products: Product[] = [
     "name": "戰鬥機風箏",
     "price": "$75.00",
     "description": "精準軍事飛機造型，還原戰機霸氣姿態，飛行性能出色，是航空迷的理想收藏。",
-    "image_url": "/image/products/k092.jpg",
+    "image_url": "/catalogue/images/cs-1008-fighter-kite-1.jpg",
     "category": "飛機火箭風箏"
   },
   {
@@ -1055,7 +1055,7 @@ export const products: Product[] = [
     "name": "特技風箏～火熖雙線 1.2米運動版",
     "price": "$85.00",
     "description": "專業雙線設計，火焰圖案，120cm展翼，可做橫飛、俯衝等特技動作，適合進階玩家。",
-    "image_url": "/image/products/k093.jpg",
+    "image_url": "/catalogue/images/cs-1009-flame-stunt-kite-1.jpg",
     "category": "特技風箏"
   },
   {
@@ -1063,7 +1063,7 @@ export const products: Product[] = [
     "name": "特技風箏～飛魚雙線 1.2米運動版",
     "price": "$85.00",
     "description": "飛魚圖案雙線特技風箏，120cm展翼，靈活操控，可做多種花式動作，優雅靈動。",
-    "image_url": "/image/products/k093.jpg",
+    "image_url": "/catalogue/images/cs-1010-flying-fish-stunt-kite-1.jpg",
     "category": "特技風箏"
   },
   {
@@ -1071,7 +1071,7 @@ export const products: Product[] = [
     "name": "1.9米 金麟王蛇風箏 ～ 尺寸：190cm (L)",
     "price": "$75.00",
     "description": "金色鱗片蛇形設計，190cm長，飛行時在空中蜿蜒盤旋，氣勢磅礴，引人注目。",
-    "image_url": "/image/products/k073.jpg",
+    "image_url": "/catalogue/images/cs-1011-golden-snake-kite-1.jpg",
     "category": "長蛇風箏"
   },
   {
@@ -1079,7 +1079,7 @@ export const products: Product[] = [
     "name": "15米 曼巴蛇風箏 ～ 尺寸：1500cm (L)",
     "price": "$75.00",
     "description": "15米超長曼巴蛇風箏，空中展開震撼全場，色彩對比強烈，是收藏家的極致之選。",
-    "image_url": "/image/products/k074.jpg",
+    "image_url": "/catalogue/images/cs-1012-mamba-snake-kite-1.jpg",
     "category": "長蛇風箏"
   },
   {
@@ -1087,7 +1087,7 @@ export const products: Product[] = [
     "name": "會跳舞的乳牛風箏",
     "price": "$75.00",
     "description": "乳牛造型風箏，微風中四肢隨風搖擺，彷彿真的在跳舞，萌趣十足，老少共樂。",
-    "image_url": "/image/products/k041.jpg",
+    "image_url": "/catalogue/images/cs-1013-dancing-cow-kite-1.jpg",
     "category": "可愛動物風箏"
   },
   {
@@ -1095,7 +1095,7 @@ export const products: Product[] = [
     "name": "1.5米 小海龜風箏 ～ 尺寸：150cm (W)",
     "price": "$75.00",
     "description": "細緻龜甲圖案，150cm尺寸，飛行穩定，海邊放飛特別應景，是海洋主題首選。",
-    "image_url": "/image/products/k038.jpg",
+    "image_url": "/catalogue/images/cs-1014-small-turtle-kite-1.jpg",
     "category": "海洋生物風箏"
   },
   {
@@ -1103,7 +1103,7 @@ export const products: Product[] = [
     "name": "海龜風箏",
     "price": "$75.00",
     "description": "精緻海龜圖案，綠棕色搭配生動，飛行時如悠游海龜，適合家庭出遊及親子活動。",
-    "image_url": "/image/products/k039.jpg",
+    "image_url": "/catalogue/images/cs-1015-sea-turtle-kite-1.jpg",
     "category": "海洋生物風箏"
   },
   {
@@ -1111,7 +1111,7 @@ export const products: Product[] = [
     "name": "小柴犬風箏",
     "price": "$75.00",
     "description": "超人氣柴犬造型，憨態可掬，放飛時萌態十足，是柴犬愛好者的必備收藏。",
-    "image_url": "/image/products/k040.jpg",
+    "image_url": "/catalogue/images/cs-1016-shiba-inu-kite-1.jpg",
     "category": "可愛動物風箏"
   },
   {
@@ -1119,7 +1119,7 @@ export const products: Product[] = [
     "name": "招財貓風箏",
     "price": "$75.00",
     "description": "傳統吉祥招財貓造型，天空中揮動幸運小手，寓意招財納福，是送禮自用的好選擇。",
-    "image_url": "/image/products/k044.jpg",
+    "image_url": "/catalogue/images/cs-1017-lucky-cat-kite-1.jpg",
     "category": "傳統造型風箏"
   },
   {
@@ -1127,7 +1127,7 @@ export const products: Product[] = [
     "name": "1.8米 小蜜蜂風箏 ～ 尺寸：180cm (W)",
     "price": "$90.00",
     "description": "活潑蜜蜂造型，黃黑條紋配色，180cm展翼，空中飛行時如真實大蜜蜂，引人注目。",
-    "image_url": "/image/products/k049.jpg",
+    "image_url": "/catalogue/images/cs-1018-bee-kite-1.jpg",
     "category": "昆蟲蝙蝠風箏"
   },
   {
@@ -1143,7 +1143,7 @@ export const products: Product[] = [
     "name": "2.4米 蝙蝠風箏 ～ 尺寸：240cm (W)",
     "price": "$75.00",
     "description": "2.4米超大蝙蝠風箏，展翼展開氣勢非凡，萬聖節主題活動最佳選擇，視覺衝擊超強。",
-    "image_url": "/image/products/k053.jpg",
+    "image_url": "/catalogue/images/cs-1020-bat-kite-1.jpg",
     "category": "大型風箏"
   },
   {
@@ -1151,7 +1151,7 @@ export const products: Product[] = [
     "name": "1.65米 雄鷹風箏 ～ 尺寸：165cm (W) x 75cm (H)",
     "price": "$75.00",
     "description": "逼真老鷹造型，精細羽毛紋路，165cm展翼，飛行穩定，宛如真鷹在空中巡弋。",
-    "image_url": "/image/products/k025.jpg",
+    "image_url": "/catalogue/images/cs-1021-eagle-kite-1.jpg",
     "category": "飛鳥風箏"
   },
   {
@@ -1159,7 +1159,7 @@ export const products: Product[] = [
     "name": "1.7米 白頭鷹風箏 ～ 尺寸：170cm (W) x 120cm (H)",
     "price": "$75.00",
     "description": "美洲白頭鷹經典形象，白黑對比配色，170cm展翼，質感出衆，飛行性能優異。",
-    "image_url": "/image/products/k026.jpg",
+    "image_url": "/catalogue/images/cs-1022-bald-eagle-kite-1.jpg",
     "category": "飛鳥風箏"
   },
   {
@@ -1167,7 +1167,7 @@ export const products: Product[] = [
     "name": "1.8米 金鷹風箏 ～ 尺寸：180cm (W) x 80cm (H)",
     "price": "$90.00",
     "description": "金色老鷹尊貴形象，180cm展翼，陽光下金光閃耀，是鷹系列中最具視覺衝擊的款式。",
-    "image_url": "/image/products/k027.jpg",
+    "image_url": "/catalogue/images/cs-1023-golden-eagle-kite-1.jpg",
     "category": "飛鳥風箏"
   }
 ];
