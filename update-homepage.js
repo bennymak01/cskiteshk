@@ -121,48 +121,8 @@ function blogCardHtml(p) {
 }
 
 function buildKitesSection(products) {
-  const latest = [...products].reverse().slice(0, MAX_PRODUCTS);
-  const cards = latest.map(productCardHtml).join('\n            ');
-  const id = 'kite-latest-carousel';
-  return `<!-- Latest Kites Section -->
-  <section class="py-16 bg-gradient-to-b from-white to-green-50 overflow-hidden">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between mb-8">
-        <div>
-          <p class="text-xs font-bold tracking-widest uppercase text-green-600 mb-1">NEW ARRIVALS</p>
-          <h2 class="text-4xl font-bold text-green-700">最新風箏</h2>
-        </div>
-        <div class="flex gap-3">
-          <button id="${id}-prev" aria-label="上一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8249;</button>
-          <button id="${id}-next" aria-label="下一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8250;</button>
-        </div>
-      </div>
-      <div class="relative">
-        <div id="${id}" class="flex gap-5 overflow-x-auto scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
-          <style>#${id}::-webkit-scrollbar{display:none}</style>
-            ${cards}
-        </div>
-      </div>
-      <div class="text-center mt-8">
-        <a href="/products/" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
-          查看全部風箏
-          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
-        </a>
-      </div>
-    </div>
-    <script>
-    (function(){
-      var track = document.getElementById('${id}');
-      var prevBtn = document.getElementById('${id}-prev');
-      var nextBtn = document.getElementById('${id}-next');
-      if (!track || !prevBtn || !nextBtn) return;
-      var cardW = track.querySelector('.kite-carousel-item') ? track.querySelector('.kite-carousel-item').offsetWidth + 20 : 292;
-      prevBtn.addEventListener('click', function(){ track.scrollBy({left: -cardW * 2, behavior: 'smooth'}); });
-      nextBtn.addEventListener('click', function(){ track.scrollBy({left: cardW * 2, behavior: 'smooth'}); });
-    })();
-    </script>
-  </section>
-  <!-- /Latest Kites Section -->`;
+  // This section is now disabled - returning empty string
+  return '';
 }
 
 function buildBlogSection(posts) {
@@ -170,25 +130,28 @@ function buildBlogSection(posts) {
   const cards = latest.map(blogCardHtml).join('\n            ');
   const id = 'blog-latest-carousel';
   return `<!-- Latest Blog Posts Section -->
-  <section class="py-16 bg-white overflow-hidden">
+  <section class="py-20 bg-gradient-to-b from-white to-green-50 overflow-hidden">
     <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold tracking-widest uppercase text-green-600 mb-2">BLOG · 風箏知識</p>
+        <h2 class="text-4xl font-bold text-green-700 mb-4">最新文章</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">由 Benny Mak 親自撰寫的放風箏知識與技巧分享，助你選對風箏、飛得更遠</p>
+      </div>
       <div class="flex items-center justify-between mb-8">
         <div>
-          <p class="text-xs font-bold tracking-widest uppercase text-green-600 mb-1">BLOG · 風箏知識</p>
-          <h2 class="text-4xl font-bold text-green-700">最新文章</h2>
         </div>
         <div class="flex gap-3">
           <button id="${id}-prev" aria-label="上一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8249;</button>
           <button id="${id}-next" aria-label="下一個" class="w-11 h-11 rounded-full bg-white border-2 border-green-200 text-green-700 hover:bg-green-600 hover:text-white hover:border-green-600 transition-all shadow-md flex items-center justify-center text-xl font-bold">&#8250;</button>
         </div>
       </div>
-      <div class="relative">
-        <div id="${id}" class="flex gap-5 overflow-x-auto scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
+      <div class="relative max-w-4xl mx-auto">
+        <div id="${id}" class="flex gap-6 overflow-x-auto scroll-smooth pb-4" style="scrollbar-width:none;-ms-overflow-style:none;">
           <style>#${id}::-webkit-scrollbar{display:none}</style>
             ${cards}
         </div>
       </div>
-      <div class="text-center mt-8">
+      <div class="text-center mt-12">
         <a href="/blog/" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
           查看全部文章
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
