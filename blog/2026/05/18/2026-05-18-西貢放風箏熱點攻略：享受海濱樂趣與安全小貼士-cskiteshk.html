@@ -1,0 +1,403 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>博客文章 | CS Kites 志成香港風箏店</title>
+  <meta name="description" content="風箏放飛技巧、風箏故事、香港放風箏好去處及風箏推介，CS Kites 志成香港風箏店博客。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          backgroundImage: {
+            'site-gradient': 'linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #9333ea 100%)',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background: linear-gradient(135deg, #38bdf8 0%, #3b82f6 50%, #9333ea 100%);
+      min-height: 100vh;
+    }
+    .card-img-zoom img {
+      transition: transform 0.3s ease;
+    }
+    .card-img-zoom:hover img {
+      transform: scale(1.08);
+    }
+    .blog-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .blog-card:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    }
+    .tab-btn {
+      transition: all 0.2s ease;
+    }
+    .tab-btn.active {
+      background: white;
+      color: #2563eb;
+      font-weight: 700;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in-up {
+      animation: fadeInUp 0.5s ease both;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b-2 border-green-200">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="/" class="text-2xl font-bold text-green-700 hover:text-green-600 transition-colors">CS Kites 志成香港風箏店</a>
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="/" class="text-gray-700 hover:text-green-600 transition-colors font-medium">首頁</a>
+          <a href="/products" class="text-gray-700 hover:text-green-600 transition-colors font-medium">風箏產品</a>
+          <a href="/blog" class="text-green-700 font-bold hover:text-green-600 transition-colors">博客文章</a>
+          <a href="/about" class="text-gray-700 hover:text-green-600 transition-colors font-medium">關於我們</a>
+          <a href="/contact" class="text-gray-700 hover:text-green-600 transition-colors font-medium">聯絡我們</a>
+          <a href="/games" class="text-gray-700 hover:text-green-600 transition-colors font-medium">風箏遊戲</a>
+        </nav>
+        <!-- Desktop: Search + Lang + WhatsApp -->
+        <div class="hidden md:flex items-center gap-3">
+          <form onsubmit="handleSearch(event, this)" class="flex items-center">
+            <div class="flex items-center border border-green-300 rounded-full overflow-hidden bg-white shadow-sm">
+              <input type="text" placeholder="搜尋風箏..." class="w-36 lg:w-44 px-3 py-1.5 text-sm text-gray-700 placeholder-gray-400 outline-none bg-transparent">
+              <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-3 py-1.5 transition-colors flex items-center">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
+              </button>
+            </div>
+          </form>
+          <div class="flex items-center rounded-lg overflow-hidden border border-green-300 text-sm font-semibold">
+            <a href="#" class="px-2 py-1 bg-green-600 text-white cursor-default">中</a>
+            <span class="text-green-300 select-none px-0.5">|</span>
+            <a href="/en/blog" class="px-2 py-1 text-gray-500 hover:text-green-700 transition-colors">EN</a>
+          </div>
+          <a href="https://wa.me/85261741284" target="_blank" rel="noopener noreferrer"
+             class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-all transform hover:scale-105 shadow-md">WhatsApp</a>
+        </div>
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-btn" class="md:hidden text-green-700" aria-label="Toggle menu">
+          <svg id="menu-icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+          <svg id="menu-icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-green-200">
+      <div class="container mx-auto px-4 flex flex-col space-y-3">
+        <form onsubmit="handleSearch(event, this)">
+          <div class="flex items-center border border-green-300 rounded-lg overflow-hidden bg-white">
+            <input type="text" placeholder="搜尋風箏..." class="flex-1 px-4 py-2 text-sm text-gray-700 placeholder-gray-400 outline-none bg-transparent">
+            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0"/></svg>
+            </button>
+          </div>
+        </form>
+        <a href="/" class="text-gray-700 hover:text-green-600 transition-colors font-medium">首頁</a>
+        <a href="/products" class="text-gray-700 hover:text-green-600 transition-colors font-medium">風箏產品</a>
+        <a href="/blog" class="text-green-700 font-bold">博客文章</a>
+        <a href="/about" class="text-gray-700 hover:text-green-600 transition-colors font-medium">關於我們</a>
+        <a href="/contact" class="text-gray-700 hover:text-green-600 transition-colors font-medium">聯絡我們</a>
+        <a href="/games" class="text-gray-700 hover:text-green-600 transition-colors font-medium">風箏遊戲</a>
+        <div class="flex items-center rounded-lg overflow-hidden border border-green-300 text-sm font-semibold w-fit">
+          <a href="#" class="px-2 py-1 bg-green-600 text-white cursor-default">中</a>
+          <span class="text-green-300 select-none px-0.5">|</span>
+          <a href="/en/blog" class="px-2 py-1 text-gray-500 hover:text-green-700 transition-colors">EN</a>
+        </div>
+        <a href="https://wa.me/85261741284" target="_blank" rel="noopener noreferrer"
+           class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-center transition-colors">WhatsApp 聯絡</a>
+      </div>
+    </div>
+  </header>
+  <script>
+    function handleSearch(e, form) {
+      e.preventDefault();
+      var q = form.querySelector('input').value.trim();
+      if (q) window.location.href = '/search?q=' + encodeURIComponent(q);
+    }
+    (function() {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('menu-icon-open');
+      var iconClose = document.getElementById('menu-icon-close');
+      btn.addEventListener('click', function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', isOpen);
+        iconOpen.classList.toggle('hidden', !isOpen);
+        iconClose.classList.toggle('hidden', isOpen);
+      });
+    })();
+  </script>
+
+  <main class="max-w-7xl mx-auto px-4 pb-20">
+
+    <!-- Hero -->
+    <section class="py-16 text-center fade-in-up">
+      <div class="text-5xl mb-4">🪁</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">風箏博客</h1>
+      <p class="text-white/80 text-lg max-w-xl mx-auto">放飛技巧、風箏故事、好去處推介，一切關於風箏的精彩內容</p>
+    </section>
+
+    <!-- Category Tabs -->
+    <section class="mb-10">
+      <div class="flex flex-wrap justify-center gap-3">
+        <button class="tab-btn active px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:white;"
+                data-filter="all" onclick="filterPosts(this, 'all')">
+          全部
+        </button>
+        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);"
+                data-filter="放風箏技巧" onclick="filterPosts(this, '放風箏技巧')">
+          🎯 放風箏技巧
+        </button>
+        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);"
+                data-filter="風箏故事" onclick="filterPosts(this, '風箏故事')">
+          📖 風箏故事
+        </button>
+        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);"
+                data-filter="邊度放風箏" onclick="filterPosts(this, '邊度放風箏')">
+          📍 邊度放風箏
+        </button>
+        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);"
+                data-filter="風箏推介" onclick="filterPosts(this, '風箏推介')">
+          ⭐ 風箏推介
+        </button>
+        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold"
+                style="background:rgba(255,255,255,0.15); color:rgba(255,255,255,0.85);"
+                data-filter="風箏新聞" onclick="filterPosts(this, '風箏新聞')">
+          📰 風箏新聞
+        </button>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section>
+      <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<title>西貢放風箏熱點攻略：享受海濱樂趣與安全小貼士 | CSKites.hk</title>
+<meta name="description" content="探索西貢海灘的放風箏樂趣，了解如何選擇合適的風箏，並掌握安全放飛技巧。CSKites.hk 提供多款風箏選擇，讓您的戶外活動更精彩！">
+</head>
+<body>
+  <main class="max-w-7xl mx-auto px-4 pb-20">
+    <!-- Hero -->
+    <section class="py-16 text-center fade-in-up">
+      <div class="text-5xl mb-4">🪁</div>
+      <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">風箏博客</h1>
+      <p class="text-white/80 text-lg max-w-xl mx-auto">放飛技巧、風箏故事、好去處推介，一切關於風箏的精彩內容</p>
+    </section>
+
+    <!-- Article Content -->
+    <section>
+      <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <div class="mb-4 text-sm text-gray-500">
+          <span>發佈日期：2026年05月18日</span>
+          <span class="mx-2">·</span>
+          <span class="text-amber-500 font-semibold">📰 風箏新聞</span>
+        </div>
+        <h1 class="text-4xl font-bold text-gray-800 mb-3">西貢海灘放風箏全攻略：享受藍天白雲下的飛翔樂趣！</h1>
+        <p class="text-xl text-gray-500 mb-6 italic">每日風箏資訊，助您掌握最新動態</p>
+        
+        <div class="prose prose-lg max-w-none space-y-8">
+          ```markdown
+
+# 西貢海灘放風箏全攻略：享受藍天白雲下的飛翔樂趣！
+
+## 快速解答：西貢海灘放風箏
+*   **最佳地點：** 西貢多個海灘因風勢穩定，是理想的放風箏地點。
+*   **安全守則：** 避免電線、人群密集處，選擇空曠地帶，並留意天氣變化。
+*   **風箏選擇：** 根據風力大小和個人喜好，可選擇輕巧或大型風箏，如海洋生物風箏或飛鳥風箏。
+
+隨著香港天氣逐漸轉好，微風輕拂，正是戶外活動的好時節。西貢多個海灘，憑藉其開闊的空間和穩定的風力，已然成為市民們放風箏的熱門去處。無論是親子同樂，或是三五知己享受閒暇時光，放風箏都是一項既能親近大自然，又能帶來無窮樂趣的活動。
+
+在西貢的海灘上，您可以盡情感受海風的擁抱，看著色彩斑斕的風箏在藍天中自由翱翔，那份愜意與放鬆，是都市生活中難得的體驗。許多風箏愛好者都讚賞西貢獨特的地理環境，特別是其穩定的風向，讓風箏更容易升空，也更持久地停留在空中，大大提升了放風箏的成功率和樂趣。
+
+### 如何選擇您的理想風箏？
+
+既然西貢海灘是放風箏的絕佳地點，那麼選擇一款適合的風箏就顯得尤為重要。對於海灘這種開闊且風力較穩定的環境，我們推薦幾款特別適合的風箏：
+
+1.  **海洋生物風箏：** 在海邊放飛海洋生物造型的風箏，如栩栩如生的「[1.5米 小海龜 風箏](https://csstationery.hk/product/1-5%e7%b1%b3-%e5%b0%8f%e6%b5%b7%e9%be%9c-%e9%a2%a8%e7%ae%8f/)」或色彩繽紛的「[4米 彩魚 風箏](https://csstationery.hk/product/4%e7%b1%b3-%e5%bd%a9%e9%ad%9a-%e9%a2%a8%e7%ae%8f-%ef%bd%9e-%e5%b0%ba%e5%af%b8%ef%bc%9a400cm-w-x-1500cm-h/)」，不僅應景，更能吸引眾人目光，為您的海灘之旅增添一份獨特的魅力。想像一下，一隻巨大的彩魚在海風中擺動，多麼壯觀！
+
+2.  **飛鳥風箏：** 模擬鳥類飛翔姿態的風箏，如「[1.2米 鷹風箏](https://csstationery.hk/product/1-6%e7%b1%b3-%e9%b7%b9%e9%a2%a8%e7%ae%8f/)」或「[1.65米 雄鷹風箏](https://csstationery.hk/product/1-65%e7%b1%b3-%e9%9b%84%e9%b7%b9%e9%a2%a8%e7%ae%8f-%e5%b0%ba%e5%af%b8%ef%bc%9a165cm-w-x-75cm-h/)」，在海灘廣闊的天空中，更能展現其雄偉與靈動。這些風箏通常結構穩固，適合在較為穩定的海風中升空。
+
+3.  **傳統造型風箏：** 對於喜歡經典風格的朋友，「[小彩虹風箏](https://csstationery.hk/product/%e5%b0%8f%e5%bd%a9%e8%99%b9%e9%a2%a8%e7%ae%8f/)」或「[2.5 米雷達風箏](https://csstationery.hk/product/2-5-%e7%b1%b3%e9%9b%b7%e9%81%94%e9%a2%a8%e7%ae%8f/)」都是不錯的選擇。它們設計簡潔，易於操控，非常適合初學者或家庭活動。
+
+### 安全放飛，樂趣加倍
+
+儘管放風箏充滿樂趣，但安全始終是首要考量。特別是在海灘這樣人來人往的公共場所，更應提高警覺。專業人士提醒，放風箏時務必注意以下幾點：
+
+*   **避開電線和高壓電塔：** 這些設施不僅會阻礙風箏飛行，更可能導致觸電危險。
+*   **遠離人群密集區域：** 避免風箏突然墜落或線繩纏繞到他人，造成不必要的傷害。
+*   **選擇空曠平坦的場地：** 確保有足夠的空間讓風箏升降，並方便您移動。
+*   **留意天氣變化：** 強風或雷雨天氣不宜放風箏，以免發生意外。
+*   **使用專業風箏線和線轆：** 確保線繩的強度和操控的穩定性。CSKites.hk 提供多款高品質的「[風箏線轆](https://csstationery.hk/product-category/accessories-tools/)」和「[兒童防割手套HPPE高強纖維](https://csstationery.hk/product/%e5%85%92%e7%ab%a5%e9%98%b2%e5%89%b2%e6%89%8b%e5%a5%97hppe%e9%ab%98%e5%bc%b7%e7%ba%96%e7%b6%ad-%e5%8f%a6%e6%9c%89%e5%a4%a7%e4%ba%ba%e6%ac%be/)」，助您安全放飛。
+
+#
+## 常見問題
+
+### Q：西貢海灘適合什麼季節放風箏？
+風箏愛好者普遍認為，春秋兩季是西貢海灘放風箏的最佳時節，此時風力適中且穩定，天氣也較為宜人。夏季則需留意午後雷陣雨和颱風季節，冬季則可能風力過大。
+
+### Q：初學者在西貢海灘放風箏有什麼特別建議？
+對於初學者，建議選擇操作簡單、尺寸適中的傳統造型風箏或小型飛鳥風箏，例如「[小彩虹風箏](https://csstationery.hk/product/%e5%b0%8f%e5%bd%a9%e8%99%b9%e9%a2%a8%e7%ae%8f/)」。同時，務必選擇空曠、無障礙物的海灘區域，並確保有足夠長的風箏線，並佩戴「[風箏手套](https://csstationery.hk/product/%e9%98%b2%e5%88%87%e5%89%b2%e9%a2%a8%e7%ae%8f%e6%89%8b%e5%a5%97/)」以保護雙手。
+```
+        </div>
+        
+<section>
+  <h2 class="text-2xl font-bold text-gray-800 mb-4">結論</h2>
+  <p class="text-gray-700 text-lg">西貢海灘無疑是放風箏的理想天堂，但享受這份樂趣的同時，我們更應將安全放在第一位。選對風箏，遵守安全守則，您就能在藍天白雲下，盡情體驗放風箏帶來的無限歡樂。立即前往 CSKites.hk 挑選您的專屬風箏，為下一個西貢海灘之旅做好準備吧！</p>
+</section>
+
+        
+      </div>
+    </section>
+  </main>
+
+      </div>
+
+      <!-- Empty state -->
+      <div id="empty-state" class="hidden text-center py-20">
+        <div class="text-5xl mb-4">🪁</div>
+        <p class="text-white/70 text-lg">暫時未有此分類文章</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white mt-auto">
+    <div class="container mx-auto px-4 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">CS Kites 志成香港風箏店</h3>
+          <p class="text-gray-300">近 40 年歷史，由麥氏家族經營。提供超過 50 款風箏，適合初學者到進階玩家。</p>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">聯絡資訊</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li>📍 香港九龍旺角界限街 12 號 D 地舖（太子站 D 出口）</li>
+            <li>📞 27783809</li>
+            <li>📱 WhatsApp: 61741284</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">快速連結</h4>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="/products" class="hover:text-white transition-colors">風箏產品</a></li>
+            <li><a href="/blog" class="hover:text-white transition-colors">博客文章</a></li>
+            <li><a href="/testimonials/" class="hover:text-green-400 transition-colors font-medium text-green-300">⭐ 客戶推薦</a></li>
+            <li><a href="/about" class="hover:text-white transition-colors">關於我們</a></li>
+            <li><a href="/contact" class="hover:text-white transition-colors">聯絡我們</a></li>
+            <li><a href="/terms" class="hover:text-white transition-colors">條款與細則</a></li>
+            <li><a href="/privacy/" class="hover:text-white transition-colors">隱私政策</a></li>
+            <li><a href="/social/" class="hover:text-green-400 transition-colors font-bold text-green-300">📱 關注我們</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-4">網站地圖</h4>
+          <div style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:0.82rem;line-height:1.9">
+            <a href="/" style="color:#d1fae5;text-decoration:none;display:block;font-weight:600">🪁 CS Kites</a>
+            <a href="/" style="color:#9ca3af;text-decoration:none;display:block" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 首頁</a>
+            <a href="/products" style="color:#9ca3af;text-decoration:none;display:block" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 風箏產品</a>
+            <a href="/about" style="color:#9ca3af;text-decoration:none;display:block" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 關於我們</a>
+            <a href="/contact" style="color:#9ca3af;text-decoration:none;display:block" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 聯絡我們</a>
+            <a href="/games" style="color:#9ca3af;text-decoration:none;display:block" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 風箏遊戲</a>
+            <span style="color:#9ca3af;display:block">├── 指南</span>
+            <a href="/guides/flying-spots/" style="color:#9ca3af;text-decoration:none;display:block;padding-left:1.2em" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 放風箏地點</a>
+            <a href="/guides/how-to-choose/" style="color:#9ca3af;text-decoration:none;display:block;padding-left:1.2em" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">├── 選購指南</a>
+            <a href="/terms" style="color:#9ca3af;text-decoration:none;display:block;padding-left:1.2em" onmouseover="this.style.color='#d1fae5'" onmouseout="this.style.color='#9ca3af'">└── 條款與細則</a>
+          </div>
+          <a href="/sitemap/" style="display:inline-block;margin-top:10px;color:#4ade80;text-decoration:none;font-size:0.82rem">查看完整網站地圖 →</a>
+          <div style="margin-top:15px;padding:10px;background:rgba(255,255,255,0.05);border-radius:8px;border:1px solid rgba(74,222,128,0.2)">
+            <p style="font-size:0.85rem;color:#4ade80;font-weight:700;margin-bottom:5px">✨ 關注我們的社交媒體</p>
+            <p style="font-size:0.75rem;color:#9ca3af;margin-bottom:8px">獲取最新風箏資訊與活動消息</p>
+            <a href="/social/" style="display:inline-block;background:#16a34a;color:#fff;font-size:0.75rem;font-weight:700;padding:5px 12px;border-radius:4px;text-decoration:none">立即關注</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+      <div style="display:flex;justify-content:center;gap:1.5rem;margin-bottom:1rem">
+        <a href="https://www.facebook.com/cskites?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+        </a>
+        <a href="https://www.instagram.com/cs_kites?igsh=MXhkems5cDZieTlkeg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"></path></svg>
+        </a>
+        <a href="https://youtube.com/@cskites8269?si=uolqDdRrpJOVcG5A" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 00-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 00.527 6.205a31.247 31.247 0 00-.522 5.805 31.247 31.247 0 00.522 5.783 3.007 3.007 0 002.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 002.088-2.088 31.247 31.247 0 00.5-5.783 31.247 31.247 0 00-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path></svg>
+        </a>
+        <a href="https://x.com/CsKites?t=PvrdbJCddUB17iyOSrIm8A&s=09" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+        </a>
+      </div>
+      <p style="margin-bottom:0.5rem">
+        <a href="/terms" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">條款與細則</a>
+        <span style="margin:0 0.5rem">|</span>
+        <a href="/privacy/" style="color:#9ca3af" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#9ca3af'">隱私政策</a>
+      </p>
+      <p>© 2026 CS Kites 志成香港風箏店. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function filterPosts(btn, category) {
+      // Update tab active state
+      document.querySelectorAll('.tab-btn').forEach(function(b) {
+        b.classList.remove('active');
+        b.style.background = 'rgba(255,255,255,0.15)';
+        b.style.color = 'rgba(255,255,255,0.85)';
+      });
+      btn.classList.add('active');
+      btn.style.background = 'white';
+      btn.style.color = '#2563eb';
+
+      // Show/hide cards
+      var cards = document.querySelectorAll('#blog-grid a[data-category]');
+      var visible = 0;
+      cards.forEach(function(card) {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+          visible++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('empty-state').classList.toggle('hidden', visible > 0);
+    }
+  </script>
+
+</body>
+</html>
+

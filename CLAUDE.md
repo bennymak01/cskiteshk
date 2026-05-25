@@ -1,3 +1,65 @@
+# CLAUDE.md - 專案指南
+
+## 1. 專案簡介
+
+`cskiteshk` 專案是一個靜態網站，主要用於展示和銷售風箏產品。它包含豐富的產品頁面、部落格文章、關於我們、聯絡方式、隱私政策和條款等資訊頁面。專案利用 Python 和 Node.js 腳本進行內容的自動化管理，例如產品資料抓取、部落格文章發佈和首頁更新，以確保網站內容的即時性和一致性。網站的目標是為用戶提供一個全面的風箏產品資訊平台，並促進產品銷售。
+
+## 2. 資料夾結構說明
+
+以下是 `cskiteshk` 專案的主要資料夾結構及其說明：
+
+```
+cskiteshk/
+├── _context/               # 品牌相關資料，如品牌指南、語氣、關鍵字等 (建議新增)
+├── _sop/                   # 標準操作流程文件 (建議新增)
+├── assets/                 # 網站通用資源，如字體、圖示等
+├── blog/                   # 部落格文章相關檔案
+│   ├── drafts/             # 部落格文章草稿
+│   └── posts/              # 已發佈的部落格文章
+├── css/                    # 網站樣式表 (CSS 檔案)
+├── images/                 # 網站圖片資源
+│   ├── blog/               # 部落格文章圖片
+│   ├── logos/              # 品牌標誌
+│   └── products/           # 產品圖片
+├── js/                     # 網站前端 JavaScript 檔案
+├── products/               # 產品頁面相關檔案
+│   ├── excel/              # 產品資料 Excel 檔案 (e.g., kite_product_list_english_filenames.csv)
+│   ├── [product_id]/       # 各別產品的資料夾，內含 index.html
+│   └── index.html          # 產品列表頁面
+├── search/                 # 搜尋頁面相關檔案
+├── social/                 # 社交媒體相關頁面或設定
+├── testimonials/           # 客戶評價頁面相關檔案
+├── .gitignore              # Git 忽略檔案設定
+├── index.html              # 網站首頁
+├── about/index.html        # 關於我們頁面
+├── contact/index.html      # 聯絡我們頁面
+├── privacy/index.html      # 隱私政策頁面
+├── terms/index.html        # 服務條款頁面
+├── publish_drafts.py       # 發佈草稿的 Python 腳本
+├── publish_posts.py        # 發佈部落格文章的 Python 腳本
+├── robots.txt              # 搜尋引擎爬蟲協定檔案
+├── scrape-products.js      # 產品資料抓取 JavaScript 腳本
+├── scraped-products.json   # 抓取到的產品資料 JSON 檔案
+├── sitemap.xml             # 網站地圖 XML 檔案
+├── update-homepage.js      # 更新首頁的 JavaScript 腳本
+└── update-related-products.js # 更新相關產品的 JavaScript 腳本
+```
+
+## 3. 工作規則
+
+*   **品牌資料讀取：** 所有生成或輸出的內容，必須優先讀取 `_context/` 資料夾中的品牌相關資料（例如品牌指南、語氣、關鍵字等），以確保內容符合品牌調性。
+*   **流程遵循：** 在撰寫任何內容或執行任務前，請務必查閱 `_sop/` 資料夾中的標準操作流程文件，以確保工作流程的規範性與一致性。
+*   **Skills 品牌中立：** 所使用的 Skills 必須保持品牌中立性。所有品牌相關的特定資料應從 `_context/` 資料夾動態載入，而非硬編碼於 Skills 內部。
+
+## 4. 輸出檔案放置規則
+
+*   **新內容與修改：** 任何新增的頁面、文章或修改後的檔案，應放置於其邏輯所屬的資料夾內。例如，新的部落格文章草稿應放置於 `blog/drafts/`，新的產品頁面應在 `products/` 下建立對應的產品 ID 資料夾並放置 `index.html`。
+*   **自動化腳本輸出：** 腳本生成的資料（如 `scraped-products.json`）應放置於專案根目錄或專門的 `data/` 資料夾（如果未來有需求可新增）。
+*   **圖片資源：** 所有圖片應根據其用途（部落格、產品、標誌等）放置於 `images/` 下對應的子資料夾中。
+*   **CLAUDE.md：** 本文件 `CLAUDE.md` 應放置於專案的根目錄下，作為專案的入口指南。
+
+---
+
 ## Product Images Convention
 Images are stored in `/images/` (or `/assets/images/`).
 ### Naming Format
