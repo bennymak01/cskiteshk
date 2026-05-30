@@ -1,0 +1,161 @@
+
+---
+layout: ../../layouts/BlogPostLayout.astro
+title: '2026廣州從化勞模風箏邀請賽：非遺文化與馬術盛宴'
+description: '香港賽馬會鼎力支持的2026廣州從化勞模風箏邀請賽暨馬文化及馬術運動嘉年華圓滿落幕。探索非遺風箏文化與馬術表演的完美結合，感受大灣區的熱情與活力。'
+pubDate: 'May 30 2026'
+heroImage: '/image/blog-guangzhou-conghua-kite-invitation-2026-hero.jpg'
+thumbnail: '/image/blog-guangzhou-conghua-kite-invitation-2026-thumb.jpg'
+category: '風箏故事'
+---
+
+<div class="mb-4 text-sm text-gray-500">
+  <span>發佈日期：2026年05月30日</span>
+  <span class="mx-2">·</span>
+  <span>風箏故事</span>
+</div>
+
+<h1 class="text-4xl font-bold text-gray-800 mb-3">2026廣州從化勞模風箏邀請賽：非遺文化與馬術盛宴</h1>
+<p class="text-xl text-gray-500 mb-6 italic">香港賽馬會鼎力支持，非遺風箏與馬術表演的完美結合，大灣區文化盛事</p>
+
+<div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 mb-8">
+  <h2 class="text-lg font-bold text-green-800 mb-2">快速解答：2026廣州從化勞模風箏邀請賽有什麼亮點？</h2>
+  <ul class="list-disc pl-5 space-y-1 text-gray-700">
+    <li><strong>活動日期：</strong>2026年5月22日至30日</li>
+    <li><strong>活動地點：</strong>廣州從化</li>
+    <li><strong>主要贊助：</strong>香港賽馬會</li>
+    <li><strong>活動特色：</strong>結合非遺風箏文化與馬術表演，吸引大灣區遊客</li>
+  </ul>
+</div>
+
+<div class="prose prose-lg max-w-none space-y-8">
+
+  <section>
+    <p class="text-gray-700 text-lg">
+      作為一名熱愛風箏文化的香港人，我一直對傳統風箏的魅力深深著迷。當我聽聞「2026廣州從化勞模風箏邀請賽暨馬文化及馬術運動嘉年華」在廣州隆重舉行時，內心充滿了期待。這不僅是一場風箏的盛會，更是非遺文化與現代馬術運動的完美融合，讓我迫不及待地想與大家分享這份喜悅與感動。
+    </p>
+  </section>
+
+  <figure class="rounded-lg overflow-hidden shadow-md">
+    <img src="/image/blog-guangzhou-conghua-kite-invitation-2026-hero.jpg"
+         alt="2026廣州從化勞模風箏邀請賽現場，天空飛滿各式風箏，下方有馬術表演"
+         class="w-full h-64 object-cover"
+         loading="lazy">
+    <figcaption class="text-center text-sm text-gray-500 py-2 bg-gray-50">
+      2026廣州從化勞模風箏邀請賽盛況，非遺風箏與馬術表演交相輝映。
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">香港賽馬會鼎力支持，打造文化體育盛事</h2>
+    <p class="text-gray-700">
+      由香港賽馬會作為首席合作夥伴鼎力支持的「2026廣州從化勞模風箏邀請賽暨馬文化及馬術運動嘉年華」於5月22日至30日在廣州從化隆重舉行。這項活動不僅展示了風箏藝術的精髓，更將馬文化與馬術運動融入其中，為大灣區的居民和遊客帶來了一場前所未有的視覺與文化盛宴。賽馬會的贊助，無疑為這項傳統與現代結合的活動注入了強大的動力。
+    </p>
+  </section>
+
+  <figure class="rounded-lg overflow-hidden shadow-md">
+    <img src="/image/blog-guangzhou-conghua-kite-invitation-2026-stock1.jpg"
+         alt="一家大小在廣州從化勞模風箏邀請賽現場開心放風箏"
+         class="w-full h-64 object-cover"
+         loading="lazy">
+    <figcaption class="text-center text-sm text-gray-500 py-2 bg-gray-50">
+      嘉年華現場，一家大小享受放風箏的樂趣。
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">非遺風箏文化與馬術表演的完美結合</h2>
+    <p class="text-gray-700">
+      活動現場結合了非遺風箏文化與馬術表演，吸引了大批大灣區遊客參與。我看到天空被各式各樣的精美風箏點綴，有栩栩如生的龍形風箏，有色彩斑斕的蝴蝶風箏，每一隻都承載著匠人的心血與智慧。同時，精彩的馬術表演也讓人目不暇給，騎手們矯健的身姿與駿馬的奔騰，展現了力與美的結合。這種獨特的組合，讓參與者在欣賞傳統藝術的同時，也能感受到現代體育的激情。
+    </p>
+  </section>
+
+  <figure class="rounded-lg overflow-hidden shadow-md">
+    <img src="/image/blog-guangzhou-conghua-kite-invitation-2026-stock2.jpg"
+         alt="廣州從化勞模風箏邀請賽的非遺風箏展覽攤位，展示精美傳統風箏"
+         class="w-full h-64 object-cover"
+         loading="lazy">
+    <figcaption class="text-center text-sm text-gray-500 py-2 bg-gray-50">
+      精美的非遺風箏展示，吸引眾多遊客駐足觀賞。
+    </figcaption>
+  </figure>
+
+  <section>
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">我的從化風箏體驗</h2>
+    <div class="bg-amber-50 border-l-4 border-amber-400 p-5 rounded-r-lg">
+      <p class="text-gray-700 italic mb-3">
+        「我記得有一次在從化參加風箏活動，那裡的天空特別開闊，風力也恰到好處。我放飛了一隻巨大的軟體風箏，看著它在空中自由翱翔，感覺所有的煩惱都隨風而逝。這次的邀請賽，讓我再次感受到了那份純粹的快樂和對風箏的熱愛。」
+      </p>
+      <p class="text-gray-600 text-sm font-medium">——Benny Mak，CS Kites 志成風箏店創辦人</p>
+    </div>
+  </section>
+
+  <section class="bg-green-50 rounded-lg p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">活動亮點回顧</h2>
+    <p class="text-gray-700 mb-4">本次嘉年華的成功舉辦，離不開以下幾個關鍵因素：</p>
+    <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+      <li><strong>文化傳承：</strong>非遺風箏展示與製作體驗，讓更多人了解和愛上傳統風箏藝術。</li>
+      <li><strong>體育精神：</strong>馬術表演展現了運動的優雅與力量，豐富了活動的多元性。</li>
+      <li><strong>地域特色：</strong>從化優美的自然風光為風箏活動提供了絕佳的場地。</li>
+      <li><strong>大灣區交流：</strong>促進了粵港澳大灣區的文化交流與融合。</li>
+    </ul>
+    <div class="bg-white rounded-lg p-4 border border-green-200">
+      <h3 class="font-semibold text-gray-800 mb-2">精選摘要</h3>
+      <ul class="list-disc pl-5 space-y-1 text-gray-700 text-sm">
+        <li>香港賽馬會作為首席合作夥伴，為活動提供強大支持。</li>
+        <li>活動成功結合非遺風箏文化與馬術表演，內容豐富。</li>
+        <li>吸引大批大灣區遊客參與，促進文化交流。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-white rounded-lg shadow-md p-6">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">常見問題</h2>
+    <div class="space-y-6">
+      <div>
+        <h3 class="font-bold text-gray-800 mb-2">Q：這次風箏邀請賽的規模如何？</h3>
+        <p class="text-gray-700">A：本次邀請賽是廣州從化地區的一次大型文化體育盛事，由香港賽馬會鼎力贊助，吸引了眾多風箏愛好者、馬術運動員以及大灣區遊客參與，規模宏大，影響深遠。</p>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800 mb-2">Q：除了風箏和馬術，現場還有其他活動嗎？</h3>
+        <p class="text-gray-700">A：除了精彩的非遺風箏展示和馬術表演，嘉年華現場還設有馬文化體驗區、美食攤位以及多種互動遊戲，為遊客提供了豐富多彩的體驗。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="text-center py-4">
+    <p class="text-gray-600 mb-3">看完這場精彩的風箏盛會，您是否也心動了呢？想要親身體驗放風箏的樂趣，感受風箏在空中翱翔的自由與喜悅？</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="/products/" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors font-medium">
+        立即選購您的專屬風箏
+      </a>
+    </div>
+  </section>
+
+  <div class="mt-12">
+    <div class="bg-white/95 backdrop-blur-sm rounded-lg p-8 border-2 border-green-200 shadow-xl">
+      <h3 class="text-2xl font-bold text-green-700 mb-6 text-center">想了解更多或購買？</h3>
+      <div class="space-y-4">
+        <div class="flex items-start bg-green-50 rounded-lg p-4">
+          <span class="text-3xl mr-4">📍</span>
+          <div>
+            <p class="font-semibold text-green-700 mb-1">親臨門市</p>
+            <p class="text-gray-700">香港九龍旺角界限街 12 號 D 地舖（太子站 D 出口）</p>
+          </div>
+        </div>
+        <div class="flex items-start bg-green-50 rounded-lg p-4">
+          <span class="text-3xl mr-4">📱</span>
+          <div>
+            <p class="font-semibold text-green-700 mb-1">WhatsApp 查詢</p>
+            <p class="text-gray-700">61741284</p>
+          </div>
+        </div>
+        <a href="https://wa.me/85261741284" target="_blank" rel="noopener noreferrer"
+           class="block w-full text-center bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:scale-105 shadow-lg">
+          WhatsApp 聯絡我們
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div>
