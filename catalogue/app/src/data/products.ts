@@ -1169,7 +1169,47 @@ export const products: Product[] = [
     "description": "金色老鷹尊貴形象，180cm展翼，陽光下金光閃耀，是鷹系列中最具視覺衝擊的款式。",
     "image_url": "/catalogue/images/cs-1023-golden-eagle-kite-1.jpg",
     "category": "飛鳥風箏"
-  }
+  },
+  {
+  "id": "46",
+  "name": "金彩蝶 Gold Butterfly",
+  "price": "$78.00",
+  "description": "金彩蝶風箏，設計精美，色彩鮮艷。",
+  "image_url": "/catalogue/images/butterfly/gold-butterfly-kite.jpg",
+  "category": "蝴蝶風箏"
+},
+  {
+  "id": "47",
+  "name": "粉彩蝶 Pink Butterfly",
+  "price": "$78.00",
+  "description": "粉彩蝶風箏，夢幻色彩，適合拍照。",
+  "image_url": "/catalogue/images/butterfly/pink-butterfly-kite.jpg",
+  "category": "蝴蝶風箏"
+},
+  {
+  "id": "48",
+  "name": "紫彩蝶 Purple Butterfly",
+  "price": "$78.00",
+  "description": "紫彩蝶風箏，優雅大方，飛行平穩。",
+  "image_url": "/catalogue/images/butterfly/purple-butterfly-kite.jpg",
+  "category": "蝴蝶風箏"
+},
+  {
+  "id": "49",
+  "name": "藍彩蝶 Blue Butterfly",
+  "price": "$78.00",
+  "description": "藍彩蝶風箏，清新色彩，如在天空中飛舞的蝴蝶。",
+  "image_url": "/catalogue/images/butterfly/blue-butterfly-kite.jpg",
+  "category": "蝴蝶風箏"
+},
+  {
+  "id": "112",
+  "name": "彩蝴蝶 Colorful Butterfly",
+  "price": "$68.00",
+  "description": "彩蝴蝶風箏，色彩繽紛，性價比高。",
+  "image_url": "/catalogue/images/butterfly/colorful-butterfly-kite.jpg",
+  "category": "蝴蝶風箏"
+}
 ];
 
 export const categories = [
