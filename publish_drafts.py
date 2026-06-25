@@ -20,7 +20,7 @@ def publish_drafts():
             # 檢查檔名是否以日期開頭 (YYYY-MM-DD)
             if filename[:10].replace('-', '').isdigit():
                 post_date = datetime.datetime.strptime(filename[:10], '%Y-%m-%d').date()
-                if post_date == today:
+                if post_date <= today:
                     src = os.path.join(drafts_dir, filename)
                     dst = os.path.join(posts_dir, filename)
                     print(f"正在將 {filename} 從草稿移至發佈目錄...")
