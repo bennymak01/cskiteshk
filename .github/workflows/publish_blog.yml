@@ -1,10 +1,9 @@
 name: Scheduled Blog Publishing
 
 on:
-  # Schedule paused — enable by uncommenting the cron line below.
-  # Runs every Monday at 9:00 AM HKT (UTC 1:00 AM).
-  # schedule:
-  #   - cron: '0 1 * * 1'
+  # Runs every other Monday at 9:00 AM HKT (UTC 1:00 AM).
+  schedule:
+    - cron: '0 1 1,15 * *'
   workflow_dispatch:
 
 permissions:
