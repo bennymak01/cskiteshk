@@ -1,0 +1,14 @@
+# Duplicate product pages consolidated into their canonical counterpart
+# (same product, same price — kept the version already in sitemap.xml with correct images)
+/products/cs-1006   /products/k008   301
+/products/cs-1006/  /products/k008/  301
+/products/cs-1007   /products/k006   301
+/products/cs-1007/  /products/k006/  301
+/products/cs-1019   /products/k022   301
+/products/cs-1019/  /products/k022/  301
+
+# Retired category: delta (三角風箏) had zero live products
+/products/delta      /products/      301
+/products/delta/     /products/      301
+/en/products/delta   /en/products/   301
+/en/products/delta/  /en/products/   301
