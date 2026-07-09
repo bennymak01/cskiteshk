@@ -80,6 +80,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.cskites.hk/blog/today-kite-flying-weather-guide/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.cskites.hk/blog/hong-kong-kite-season-guide/</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.cskites.hk/blog/beginner-kite-brands/</loc>
     <lastmod>2026-07-04</lastmod>
     <changefreq>monthly</changefreq>
