@@ -1,6 +1,14 @@
+---
+title: 香港放風箏的傳統紙鷂和手握木柄線轆會消失嗎？
+image:
+  path: /image/blog/hong-kong-traditional-kite-shop-signboard.jpg
+  alt: CS Kites 旺角門市招牌特寫，紅色立體字招牌懸掛於店舖外
+blog_category: 風箏故事
+---
+
 # 香港放風箏的傳統紙鷂和手握木柄線轆會消失嗎？
 
-![Hero Banner](/image/blog_cskites_signboard.png)
+![CS Kites 旺角門市招牌特寫，紅色立體字招牌懸掛於店舖外](/image/blog/hong-kong-traditional-kite-shop-signboard.jpg)
 
 香港的風箏文化，承載著一代又一代人的童年回憶與節日情懷。然而，隨著時代變遷，許多傳統工藝面臨失傳的危機，其中也包括了製作精美的傳統紙鷂和手握木柄線轆。這些曾經隨處可見的物品，如今卻越來越難尋。它們會消失嗎？我們又該如何守護這份珍貴的文化遺產？
 
@@ -27,7 +35,7 @@
 
 這段話道出了傳統木柄線轆的現況——它們已成為稀有品。這些線轆不僅是放風箏的工具，更是承載著匠人精神和歲月痕跡的藝術品。它們的木紋、手感，都訴說著一段段關於風箏的故事。雖然現代塑膠線轆輕便耐用，但傳統木柄線轆所帶來的獨特體驗和文化價值，是無法被取代的。我們現在看到的，或許是碩果僅存的珍品，每一件都值得被珍惜和傳承。
 
-![Traditional Wooden Kite Reels](/image/blog_traditional_reel.jpg)
+![傳統木製風箏線轆特寫，木紋與手寫標籤可見歲月痕跡](/image/blog_traditional_reel.jpg)
 
 ## 傳統紙鷂的困境與出路
 
@@ -41,7 +49,7 @@
 
 CS Kites 作為香港風箏文化的推動者，深知傳統傳承的重要性。儘管面臨供應鏈的挑戰和現代化的衝擊，我們依然堅持提供高品質的風箏產品，並努力尋找傳統工藝的替代方案。我們相信，只要有熱情和堅持，傳統文化就能找到新的出路。我們門市的招牌雖然因建築申請問題仍在等待批准，但我們對風箏的熱愛從未改變。如果您在附近看到一隻巨大的金魚風箏，或是有風箏在空中飛舞，那很可能就是我們在為香港的風箏文化努力著。
 
-![Goldfish Kite](/home/ubuntu/cskiteshk/image/blog_goldfish_kite.jpg)
+![CS Kites 門市內部，店員與大型金魚風箏及各式風箏產品](/image/blog_goldfish_kite.jpg)
 
 「其實呀去放風箏踩單車好難得㗎，我對上一次都係六七年前。今年呢就有機構帶我去,真好運！」
 
