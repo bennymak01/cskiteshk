@@ -1,6 +1,13 @@
+---
+title: 西貢放風箏指南：大坳門翱翔與香港法例須知
+image:
+  path: /image/blog/saikung-kite-guide-hero.jpg
+  alt: 西貢大坳門草坡與海岸線放風箏景色
+---
+
 # 西貢放風箏指南：大坳門翱翔與香港法例須知
 
-![Sai Kung Kite Flying Banner](../_drafts/saikung_kite_banner.jpg)
+![西貢大坳門草坡與海岸線放風箏景色](/image/blog/saikung-kite-guide-hero.jpg)
 
 > **精選摘要**：西貢大坳門是香港最受歡迎的放風箏地點之一。在享受飛行樂趣的同時，必須遵守香港法例，確保風箏高度不超過地面 60 米。本文將為您介紹適合西貢風勢的釣魚款、小型及 DIY 風箏，助您安全合法地享受親子時光。
 
@@ -27,7 +34,7 @@
 ## 不可忽視的香港法例：60 米高度限制
 在香港放風箏並非「越高越好」。根據香港法例，為了航空安全，所有在香港境內放飛的風箏，其高度**不得超過地面 60 米**。
 
-![Sai Kung Kite Flying Stock](../_drafts/saikung_kite_flying_stock.jpg)
+![遊人在西貢大坳門迎風放飛風箏](/image/blog/saikung-kite-guide-flying-stock.jpg)
 
 | 規定項目 | 限制內容 | 備註 |
 | :--- | :--- | :--- |
